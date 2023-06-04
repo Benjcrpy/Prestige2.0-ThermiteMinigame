@@ -55,11 +55,22 @@ document.querySelector('.btn_again').addEventListener('click', function(){
     reset();
 });
 
+let previousColor = '';
+
 function getRandomColor() {
-    const colors = ['#FFA500', '#800080', '#008000'];
-    const randomIndex = Math.floor(Math.random() * colors.length);
-    return colors[randomIndex];
+  const colors = ['#FFA500', '#800080', '#008000'];
+  let randomIndex = Math.floor(Math.random() * colors.length);
+  let color = colors[randomIndex];
+  
+  // Generate a new color until it is different from the previous one
+  while (color === previousColor) {
+    randomIndex = Math.floor(Math.random() * colors.length);
+    color = colors[randomIndex];
   }
+  
+  previousColor = color;
+  return color;
+}
 
 // Get the <div> element
 const barDiv = document.querySelector('.minigame .bar');
