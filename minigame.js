@@ -181,6 +181,7 @@ function reset(restart = true){
         document.querySelector('.minigame .hack').classList.add('hidden');
         document.querySelector('.minigame .splash').classList.remove('hidden');
         document.querySelector('.minigame .letters').innerHTML = '';
+        barDiv.style.backgroundColor = getRandomColor();
         start();
     }
 }
