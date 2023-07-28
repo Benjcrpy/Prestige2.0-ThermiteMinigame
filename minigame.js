@@ -58,7 +58,7 @@ document.querySelector('.btn_again').addEventListener('click', function(){
 let previousColor = '';
 
 function getRandomColor() {
-  const colors = ['#FFA500', '#800080', '#008000'];
+  const colors = ['#E08DEC', '#ACE05F', '#FFB501'];
   let randomIndex = Math.floor(Math.random() * colors.length);
   let color = colors[randomIndex];
   
@@ -122,7 +122,7 @@ let createLetter = () => {
     div.innerHTML = difficulty[0].charAt(random(0, difficulty[0].length - 1));
 
     // Generate a random color from an array of colors
-    const colors = ['#008000', '#FFA500', '#800080'];
+    const colors = ['#E08DEC', '#ACE05F', '#FFB501'];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     div.style.color = randomColor;
 
