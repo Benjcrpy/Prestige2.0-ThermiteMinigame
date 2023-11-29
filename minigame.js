@@ -38,7 +38,7 @@ const getDifficulty = () => {
         case 'medium':
             return ["asdjkl", 1500, 750, 'medium'];
         case 'hard':
-            return ["asdfhjkl", 550, 350, 'hard'];
+            return ["asdfhjkl", 800, 600, 'hard'];
     }
 }
 
